@@ -1,9 +1,7 @@
-import { useNavigate } from 'react-router-dom'
 import BackButton from '../components/BackButton'
 import { ClassicBoardIcon, SkateBoardIcon } from '../components/BoardIcons'
 
 export default function Training() {
-  const navigate = useNavigate()
 
   const styles = [
     {
