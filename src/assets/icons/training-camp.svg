@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Горы с флажком -->
+  <!-- Дальняя гора -->
+  <path d="M 12 46 L 28 22 L 38 38 L 52 46" stroke="rgba(232, 212, 200, 0.85)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Передняя гора -->
+  <path d="M 8 46 L 32 14 L 56 46" stroke="rgba(232, 212, 200, 0.85)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Флажок на ве��шине -->
+  <line x1="32" y1="14" x2="32" y2="8" stroke="rgba(232, 212, 200, 0.85)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 32 8 L 40 10 L 32 12" stroke="rgba(232, 212, 200, 0.85)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Линия горизонта -->
+  <line x1="8" y1="46" x2="56" y2="46" stroke="rgba(232, 212, 200, 0.85)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Снежные шапки -->
+  <circle cx="32" cy="14" r="2" stroke="rgba(232, 212, 200, 0.85)" stroke-width="1.5"/>
+  <circle cx="28" cy="22" r="1.5" stroke="rgba(232, 212, 200, 0.85)" stroke-width="1.5"/>
+</svg>

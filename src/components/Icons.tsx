@@ -2,198 +2,124 @@ interface IconProps {
   className?: string
 }
 
-// Обучение - Школьная доска с примерами
+// Обучение - Математика 2+2
 export const SkiIcon = ({ className = "w-12 h-12" }: IconProps) => (
-  <svg className={className} viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="darkShadow">
-        <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="black" floodOpacity="0.4"/>
-      </filter>
-    </defs>
-    {/* Темная подложка */}
-    <rect x="10" y="18" width="60" height="44" rx="4" fill="black" opacity="0.2" />
-    {/* Доска */}
-    <rect x="10" y="18" width="60" height="44" rx="4" fill="white" opacity="1" filter="url(#darkShadow)" />
-    <rect x="10" y="18" width="60" height="44" rx="4" stroke="rgba(0,0,0,0.3)" strokeWidth="3" fill="none" />
-    {/* Рамка */}
-    <rect x="13" y="21" width="54" height="38" rx="2" stroke="rgba(0,0,0,0.2)" strokeWidth="2" fill="none" />
-    {/* Примеры */}
-    <text x="22" y="35" fontFamily="monospace" fontSize="15" fontWeight="bold" fill="black" opacity="0.8">2+2=4</text>
-    <text x="22" y="49" fontFamily="monospace" fontSize="15" fontWeight="bold" fill="black" opacity="0.8">5×3=15</text>
-    {/* Линия */}
-    <line x1="18" y1="41" x2="62" y2="41" stroke="rgba(0,0,0,0.3)" strokeWidth="2" strokeLinecap="round" />
-    {/* Звездочка */}
-    <path d="M58 29 L59 32 L62 32 L60 34 L61 37 L58 35 L55 37 L56 34 L54 32 L57 32 Z" fill="gold" opacity="0.9" stroke="rgba(0,0,0,0.3)" strokeWidth="1" />
-    {/* Мел */}
-    <rect x="15" y="56" width="8" height="3" rx="1.5" fill="white" opacity="1" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
-    {/* Губка */}
-    <rect x="56" y="55" width="10" height="5" rx="2" fill="rgba(200,200,200,0.9)" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Фон для лучшей видимости */}
+    <rect x="8" y="24" width="48" height="16" rx="4" fill="rgba(255, 255, 255, 0.05)" />
+    <text
+      x="32"
+      y="36"
+      textAnchor="middle"
+      dominantBaseline="middle"
+      fill="rgba(232, 212, 200, 0.95)"
+      fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+      fontSize="22"
+      fontWeight="700"
+      letterSpacing="-0.5"
+    >
+      2+2=4
+    </text>
   </svg>
 )
 
-// Лекции - Play кнопка
+// Лекции - Видеокамера
 export const BookIcon = ({ className = "w-12 h-12" }: IconProps) => (
-  <svg className={className} viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="darkShadow"><feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="black" floodOpacity="0.4"/></filter>
-    </defs>
-    {/* Подложка */}
-    <rect x="15" y="22" width="50" height="36" rx="4" fill="black" opacity="0.2" />
-    {/* Экран */}
-    <rect x="15" y="22" width="50" height="36" rx="4" fill="white" opacity="0.95" filter="url(#darkShadow)" />
-    <rect x="15" y="22" width="50" height="36" rx="4" stroke="rgba(0,0,0,0.3)" strokeWidth="3" fill="none" />
-    {/* Play */}
-    <circle cx="40" cy="40" r="14" fill="rgba(0,0,0,0.15)" />
-    <circle cx="40" cy="40" r="14" fill="white" opacity="1" stroke="rgba(0,0,0,0.3)" strokeWidth="2" />
-    <path d="M35 32 L52 40 L35 48 Z" fill="rgba(0,0,0,0.7)" />
-    {/* Волны */}
-    <path d="M20 32 Q16 40 20 48" stroke="rgba(0,0,0,0.5)" strokeWidth="3" strokeLinecap="round" fill="none" />
-    <path d="M60 32 Q64 40 60 48" stroke="rgba(0,0,0,0.5)" strokeWidth="3" strokeLinecap="round" fill="none" />
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="16" y="22" width="28" height="20" rx="3" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="30" cy="32" r="8" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 28 28 L 28 36 L 35 32 Z" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+    <rect x="24" y="18" width="12" height="4" rx="1" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 44 27 L 48 24 L 48 40 L 44 37" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 )
 
-// Курсы - Шапка студента
+// Курсы - Диплом
 export const GraduationIcon = ({ className = "w-12 h-12" }: IconProps) => (
-  <svg className={className} viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="darkShadow"><feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="black" floodOpacity="0.4"/></filter>
-    </defs>
-    {/* Основание */}
-    <path d="M10 35 L40 25 L70 35 L40 45 Z" fill="black" opacity="0.2" />
-    <path d="M10 35 L40 25 L70 35 L40 45 Z" fill="white" opacity="1" filter="url(#darkShadow)" />
-    <path d="M10 35 L40 25 L70 35 L40 45 Z" stroke="rgba(0,0,0,0.3)" strokeWidth="2" fill="none" />
-    {/* Верх */}
-    <ellipse cx="40" cy="35" rx="30" ry="8" fill="rgba(255,255,255,0.9)" stroke="rgba(0,0,0,0.2)" strokeWidth="2" />
-    {/* Низ */}
-    <path d="M25 35 L25 50 C25 52 30 54 40 54 C50 54 55 52 55 50 L55 35" fill="rgba(255,255,255,0.85)" stroke="rgba(0,0,0,0.2)" strokeWidth="2" />
-    {/* Кисточка */}
-    <line x1="70" y1="35" x2="70" y2="58" stroke="rgba(0,0,0,0.6)" strokeWidth="3" strokeLinecap="round" />
-    <circle cx="70" cy="60" r="4" fill="gold" opacity="1" stroke="rgba(0,0,0,0.3)" strokeWidth="2" />
-    {/* Нити */}
-    <line x1="68" y1="62" x2="66" y2="66" stroke="rgba(0,0,0,0.5)" strokeWidth="2" strokeLinecap="round" />
-    <line x1="70" y1="62" x2="70" y2="66" stroke="rgba(0,0,0,0.5)" strokeWidth="2" strokeLinecap="round" />
-    <line x1="72" y1="62" x2="74" y2="66" stroke="rgba(0,0,0,0.5)" strokeWidth="2" strokeLinecap="round" />
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 18 20 L 46 20 C 47 20 48 21 48 22 L 48 42 C 48 43 47 44 46 44 L 18 44 C 17 44 16 43 16 42 L 16 22 C 16 21 17 20 18 20 Z" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 16 20 Q 14 22 16 24" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 16 40 Q 14 42 16 44" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <ellipse cx="32" cy="44" rx="8" ry="3" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 28 47 L 26 54 L 28 52 L 30 54" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 36 47 L 38 54 L 36 52 L 34 54" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="22" y1="28" x2="42" y2="28" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="22" y1="34" x2="42" y2="34" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="26" y1="40" x2="38" y2="40" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
   </svg>
 )
 
 // План - Календарь
 export const ClipboardIcon = ({ className = "w-12 h-12" }: IconProps) => (
-  <svg className={className} viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="darkShadow"><feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="black" floodOpacity="0.4"/></filter>
-    </defs>
-    {/* Подложка */}
-    <rect x="18" y="20" width="44" height="48" rx="5" fill="black" opacity="0.2" />
-    {/* Календарь */}
-    <rect x="18" y="20" width="44" height="48" rx="5" fill="white" opacity="1" filter="url(#darkShadow)" />
-    <rect x="18" y="20" width="44" height="48" rx="5" stroke="rgba(0,0,0,0.3)" strokeWidth="3" fill="none" />
-    {/* Верх */}
-    <rect x="18" y="20" width="44" height="12" rx="5" fill="rgba(0,0,0,0.1)" />
-    {/* Крепления */}
-    <rect x="28" y="16" width="4" height="8" rx="2" fill="rgba(0,0,0,0.5)" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
-    <rect x="48" y="16" width="4" height="8" rx="2" fill="rgba(0,0,0,0.5)" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
-    {/* Дни */}
-    <rect x="24" y="38" width="8" height="8" rx="2" fill="rgba(0,0,0,0.15)" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
-    <rect x="36" y="38" width="8" height="8" rx="2" fill="rgba(0,0,0,0.15)" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
-    <rect x="48" y="38" width="8" height="8" rx="2" fill="rgba(0,0,0,0.6)" stroke="rgba(0,0,0,0.3)" strokeWidth="2" />
-    <rect x="24" y="50" width="8" height="8" rx="2" fill="rgba(0,0,0,0.15)" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
-    <rect x="36" y="50" width="8" height="8" rx="2" fill="rgba(0,0,0,0.15)" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
-    {/* Галочка */}
-    <path d="M50 42 L52 44 L56 40" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="16" y="18" width="32" height="32" rx="3" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="24" y1="14" x2="24" y2="22" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round"/>
+    <line x1="40" y1="14" x2="40" y2="22" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round"/>
+    <line x1="16" y1="26" x2="48" y2="26" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="24" y1="26" x2="24" y2="50" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="32" y1="26" x2="32" y2="50" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="40" y1="26" x2="40" y2="50" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="16" y1="34" x2="48" y2="34" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="16" y1="42" x2="48" y2="42" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <circle cx="20" cy="30" r="1.5" fill="rgba(232, 212, 200, 0.85)"/>
+    <circle cx="36" cy="38" r="1.5" fill="rgba(232, 212, 200, 0.85)"/>
+    <circle cx="28" cy="46" r="1.5" fill="rgba(232, 212, 200, 0.85)"/>
   </svg>
 )
 
-// Магазин - Корзина
+// Магазин - Сумка
 export const ShoppingIcon = ({ className = "w-12 h-12" }: IconProps) => (
-  <svg className={className} viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="darkShadow"><feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="black" floodOpacity="0.4"/></filter>
-    </defs>
-    {/* Подложка */}
-    <path d="M20 28 L18 60 C18 64 20 66 24 66 L56 66 C60 66 62 64 62 60 L60 28 Z" fill="black" opacity="0.2" />
-    {/* Корзина */}
-    <path d="M20 28 L18 60 C18 64 20 66 24 66 L56 66 C60 66 62 64 62 60 L60 28 Z" fill="white" opacity="1" filter="url(#darkShadow)" />
-    <path d="M20 28 L18 60 C18 64 20 66 24 66 L56 66 C60 66 62 64 62 60 L60 28 Z" stroke="rgba(0,0,0,0.3)" strokeWidth="3" fill="none" />
-    {/* Ручки */}
-    <path d="M26 28 L26 22 C26 16 30 12 40 12 C50 12 54 16 54 22 L54 28" stroke="rgba(0,0,0,0.6)" strokeWidth="4" fill="none" strokeLinecap="round" />
-    {/* Ценник */}
-    <rect x="52" y="45" width="8" height="10" rx="2" fill="rgba(255,255,255,0.9)" stroke="rgba(0,0,0,0.3)" strokeWidth="1" />
-    <rect x="54" y="48" width="4" height="2" rx="1" fill="rgba(0,0,0,0.5)" />
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 18 26 L 46 26 L 48 46 C 48 48 46 50 44 50 L 20 50 C 18 50 16 48 16 46 Z" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="22" y1="26" x2="22" y2="22" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round"/>
+    <line x1="42" y1="26" x2="42" y2="22" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round"/>
+    <path d="M 22 22 L 26 18 L 38 18 L 42 22" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 18 32 L 16 32 C 15 32 14 33 14 34 L 14 40 C 14 41 15 42 16 42 L 18 42" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="28" y1="34" x2="36" y2="34" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="32" y1="32" x2="32" y2="36" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="32" y1="26" x2="32" y2="50" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
   </svg>
 )
 
 // Сбор - Горы
 export const MountainIcon = ({ className = "w-12 h-12" }: IconProps) => (
-  <svg className={className} viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="darkShadow"><feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="black" floodOpacity="0.4"/></filter>
-    </defs>
-    {/* Задняя гора */}
-    <path d="M52 18 L70 65 L34 65 Z" fill="rgba(0,0,0,0.15)" />
-    <path d="M52 18 L70 65 L34 65 Z" fill="white" opacity="0.7" filter="url(#darkShadow)" />
-    <path d="M52 18 L70 65 L34 65 Z" stroke="rgba(0,0,0,0.3)" strokeWidth="2" fill="none" />
-    {/* Передняя гора */}
-    <path d="M28 28 L10 65 L46 65 Z" fill="rgba(0,0,0,0.2)" />
-    <path d="M28 28 L10 65 L46 65 Z" fill="white" opacity="1" filter="url(#darkShadow)" />
-    <path d="M28 28 L10 65 L46 65 Z" stroke="rgba(0,0,0,0.4)" strokeWidth="3" fill="none" />
-    {/* Снег */}
-    <path d="M28 28 L32 38 L24 38 Z" fill="rgba(255,255,255,1)" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
-    <path d="M52 18 L56 30 L48 30 Z" fill="rgba(255,255,255,0.9)" stroke="rgba(0,0,0,0.2)" strokeWidth="1" />
-    {/* Звезда */}
-    <path d="M40 12 L42 18 L48 18 L43 22 L45 28 L40 24 L35 28 L37 22 L32 18 L38 18 Z" fill="gold" opacity="1" stroke="rgba(0,0,0,0.4)" strokeWidth="2" />
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 12 46 L 28 22 L 38 38 L 52 46" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 8 46 L 32 14 L 56 46" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="32" y1="14" x2="32" y2="8" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <path d="M 32 8 L 40 10 L 32 12" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="8" y1="46" x2="56" y2="46" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round"/>
+    <circle cx="32" cy="14" r="2" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="1.5"/>
+    <circle cx="28" cy="22" r="1.5" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="1.5"/>
   </svg>
 )
 
 // Инвентарь - Лыжи
 export const EquipmentIcon = ({ className = "w-12 h-12" }: IconProps) => (
-  <svg className={className} viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="darkShadow"><feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="black" floodOpacity="0.4"/></filter>
-    </defs>
-    {/* Лыжи */}
-    <rect x="15" y="15" width="6" height="50" rx="3" fill="rgba(0,0,0,0.15)" transform="rotate(-15 18 40)" />
-    <rect x="15" y="15" width="6" height="50" rx="3" fill="white" opacity="1" filter="url(#darkShadow)" transform="rotate(-15 18 40)" />
-    <rect x="15" y="15" width="6" height="50" rx="3" stroke="rgba(0,0,0,0.4)" strokeWidth="2" fill="none" transform="rotate(-15 18 40)" />
-
-    <rect x="59" y="15" width="6" height="50" rx="3" fill="rgba(0,0,0,0.15)" transform="rotate(15 62 40)" />
-    <rect x="59" y="15" width="6" height="50" rx="3" fill="white" opacity="1" filter="url(#darkShadow)" transform="rotate(15 62 40)" />
-    <rect x="59" y="15" width="6" height="50" rx="3" stroke="rgba(0,0,0,0.4)" strokeWidth="2" fill="none" transform="rotate(15 62 40)" />
-
-    {/* Палки */}
-    <line x1="28" y1="20" x2="32" y2="60" stroke="rgba(0,0,0,0.6)" strokeWidth="4" strokeLinecap="round" />
-    <line x1="52" y1="20" x2="48" y2="60" stroke="rgba(0,0,0,0.6)" strokeWidth="4" strokeLinecap="round" />
-    {/* Ручки */}
-    <circle cx="28" cy="20" r="4" fill="white" opacity="1" stroke="rgba(0,0,0,0.4)" strokeWidth="2" />
-    <circle cx="52" cy="20" r="4" fill="white" opacity="1" stroke="rgba(0,0,0,0.4)" strokeWidth="2" />
-    {/* Кольца */}
-    <circle cx="32" cy="60" r="4" fill="none" stroke="rgba(0,0,0,0.5)" strokeWidth="3" />
-    <circle cx="48" cy="60" r="4" fill="none" stroke="rgba(0,0,0,0.5)" strokeWidth="3" />
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 18 48 L 28 12 L 30 12 L 20 48 Z" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 46 48 L 36 12 L 34 12 L 44 48 Z" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="24" y1="48" x2="38" y2="16" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <circle cx="38" cy="16" r="2" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2"/>
+    <line x1="22" y1="48" x2="26" y2="48" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round"/>
+    <line x1="40" y1="48" x2="26" y2="16" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <circle cx="26" cy="16" r="2" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2"/>
+    <line x1="38" y1="48" x2="42" y2="48" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round"/>
   </svg>
 )
 
 // Лыжник
 export const SkierIcon = ({ className = "w-12 h-12" }: IconProps) => (
-  <svg className={className} viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="darkShadow"><feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="black" floodOpacity="0.4"/></filter>
-    </defs>
-    {/* Голова */}
-    <circle cx="45" cy="18" r="7" fill="rgba(0,0,0,0.15)" />
-    <circle cx="45" cy="18" r="7" fill="white" opacity="1" filter="url(#darkShadow)" />
-    <circle cx="45" cy="18" r="7" stroke="rgba(0,0,0,0.4)" strokeWidth="2" fill="none" />
-    {/* Тело */}
-    <path d="M45 25 Q42 35 38 42" stroke="rgba(0,0,0,0.7)" strokeWidth="7" strokeLinecap="round" />
-    <path d="M45 25 Q48 35 50 42" stroke="rgba(0,0,0,0.7)" strokeWidth="7" strokeLinecap="round" />
-    {/* Руки */}
-    <path d="M42 30 L35 38 L28 50" stroke="rgba(0,0,0,0.6)" strokeWidth="5" strokeLinecap="round" />
-    <path d="M48 30 L55 38 L62 50" stroke="rgba(0,0,0,0.6)" strokeWidth="5" strokeLinecap="round" />
-    {/* Палки */}
-    <line x1="28" y1="50" x2="22" y2="66" stroke="rgba(0,0,0,0.5)" strokeWidth="4" strokeLinecap="round" />
-    <line x1="62" y1="50" x2="68" y2="66" stroke="rgba(0,0,0,0.5)" strokeWidth="4" strokeLinecap="round" />
-    <circle cx="28" cy="50" r="3" fill="white" stroke="rgba(0,0,0,0.4)" strokeWidth="2" />
-    <circle cx="62" cy="50" r="3" fill="white" stroke="rgba(0,0,0,0.4)" strokeWidth="2" />
-    {/* Лыжи */}
-    <path d="M35 45 L20 68" stroke="rgba(0,0,0,0.6)" strokeWidth="5" strokeLinecap="round" />
-    <path d="M52 45 L58 68" stroke="rgba(0,0,0,0.6)" strokeWidth="5" strokeLinecap="round" />
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="35" cy="18" r="5" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 35 23 L 32 35" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 32 27 L 28 25 L 25 28" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 33 28 L 38 26 L 42 30" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 32 35 L 28 42 L 26 48" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 33 35 L 36 42 L 38 48" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <line x1="18" y1="50" x2="28" y2="46" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round"/>
+    <line x1="30" y1="50" x2="42" y2="46" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2.5" strokeLinecap="round"/>
+    <line x1="25" y1="28" x2="20" y2="45" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
+    <line x1="42" y1="30" x2="46" y2="46" stroke="rgba(232, 212, 200, 0.85)" strokeWidth="2" strokeLinecap="round"/>
   </svg>
 )

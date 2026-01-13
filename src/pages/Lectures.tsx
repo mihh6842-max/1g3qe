@@ -24,33 +24,53 @@ export default function Lectures() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50 relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-purple-300/20 to-pink-300/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-orange-300/20 to-pink-300/20 rounded-full blur-3xl" />
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Фон trassa.jpg */}
+      <div
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: `url('/trassa.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'brightness(0.4) saturate(1.2)',
+        }}
+      />
+
+      {/* Gradient overlay */}
+      <div className="fixed inset-0 z-0 bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-orange-600/30" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-t from-black/60 via-transparent to-white/10" />
 
       <BackButton />
 
       <div className="px-4 py-6 pb-20 relative z-10">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-4xl font-black bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent mb-2">Лекции</h1>
-          <p className="text-gray-700 mb-8 font-medium">Теоретические материалы для спортсменов</p>
+          <div className="inline-block backdrop-blur-xl bg-white/10 px-6 py-4 rounded-3xl border border-white/20 shadow-2xl mb-6">
+            <h1 className="text-4xl font-black text-white mb-1">Лекции</h1>
+            <p className="text-white/90 font-medium">Теоретические материалы</p>
+          </div>
 
-          <div className="space-y-3">
+          <div className="space-y-4">
             {lectures.map((lecture, index) => (
               <button
                 key={index}
-                className="w-full backdrop-blur-xl bg-white/60 rounded-3xl p-5 border border-white/40 shadow-2xl hover:shadow-purple-200/50 hover:bg-white/70 hover:scale-[1.02] transition-all duration-300 flex items-center gap-4 group"
+                onClick={() => alert(`Лекция: ${lecture.title}\nПродолжительность: ${lecture.duration}\n\nСкоро будет доступна!`)}
+                className="lecture-button group"
               >
-                <div className="drop-shadow-lg group-hover:scale-110 transition-transform">
-                  <VideoIcon className="w-14 h-14" />
+                <div className="icon-container drop-shadow-lg group-hover:scale-105 transition-transform flex-shrink-0">
+                  <VideoIcon className="w-12 h-12" />
                 </div>
-                <div className="flex-1 text-left">
-                  <h3 className="font-bold text-gray-800 mb-1">
+                <div className="flex-1 text-left min-w-0">
+                  <h3 className="font-bold text-white mb-1.5 text-base leading-tight" style={{color: 'rgba(232, 212, 200, 0.9)'}}>
                     {lecture.title}
                   </h3>
-                  <p className="text-sm text-gray-600 font-medium">{lecture.duration}</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium" style={{color: 'rgba(232, 212, 200, 0.6)'}}>⏱️ {lecture.duration}</span>
+                    <span className="text-xs backdrop-blur-lg bg-purple-500/20 text-purple-200 px-2 py-0.5 rounded-full border border-purple-300/30">HD</span>
+                  </div>
                 </div>
-                <div className="text-purple-600 text-2xl group-hover:translate-x-1 transition-transform">▶</div>
+                <div className="lecture-play-btn flex-shrink-0">
+                  <div className="text-orange-100 text-xl">▶</div>
+                </div>
               </button>
             ))}
           </div>

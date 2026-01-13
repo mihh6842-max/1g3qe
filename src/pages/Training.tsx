@@ -19,46 +19,64 @@ export default function Training() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 relative overflow-hidden">
-      {/* Фоновые декоративные элементы */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-orange-300/20 to-pink-300/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-purple-300/20 to-orange-300/20 rounded-full blur-3xl" />
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Фон trassa.jpg */}
+      <div
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: `url('/trassa.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'brightness(0.4) saturate(1.2)',
+        }}
+      />
+
+      {/* Gradient overlay */}
+      <div className="fixed inset-0 z-0 bg-gradient-to-br from-orange-500/30 via-pink-500/20 to-purple-600/30" />
+      <div className="fixed inset-0 z-0 bg-gradient-to-t from-black/60 via-transparent to-white/10" />
 
       <BackButton />
 
       <div className="px-4 py-6 pb-20 relative z-10">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-4xl font-black bg-gradient-to-r from-orange-600 via-pink-600 to-purple-600 bg-clip-text text-transparent mb-2">Обучение</h1>
-          <p className="text-gray-700 mb-8 font-medium">Выберите стиль катания для обучения</p>
+          <div className="inline-block backdrop-blur-xl bg-white/10 px-6 py-4 rounded-3xl border border-white/20 shadow-2xl mb-6">
+            <h1 className="text-4xl font-black text-white mb-1">Обучение</h1>
+            <p className="text-white/90 font-medium">Выберите стиль катания</p>
+          </div>
 
           <div className="space-y-4">
             {styles.map((style, index) => (
               <div
                 key={index}
-                className="backdrop-blur-xl bg-white/60 rounded-3xl p-6 border border-white/40 shadow-2xl hover:shadow-orange-200/50 hover:bg-white/70 transition-all duration-300"
+                className="backdrop-blur-2xl bg-white/15 rounded-3xl p-6 border border-white/20 shadow-2xl hover:bg-white/25 hover:border-white/30 transition-all duration-300"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="drop-shadow-2xl">
-                    <style.Icon className="w-16 h-16" />
+                  <div className="icon-container drop-shadow-2xl">
+                    <style.Icon className="w-12 h-12" />
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent mb-1">
+                    <h2 className="text-xl font-bold text-white mb-1">
                       {style.title}
                     </h2>
-                    <p className="text-gray-700 text-sm font-medium">{style.description}</p>
+                    <p className="text-white/80 text-sm font-medium">{style.description}</p>
                   </div>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-3">
                   {style.lessons.map((lesson, idx) => (
                     <button
                       key={idx}
-                      className="w-full backdrop-blur-lg bg-gradient-to-r from-orange-100/50 to-pink-100/50 hover:from-orange-200/60 hover:to-pink-200/60 rounded-2xl p-3 text-left transition-all duration-200 flex items-center justify-between border border-orange-200/30 hover:border-orange-300/50 group"
+                      onClick={() => alert(`Урок: ${lesson}\n\nСкоро будет доступен!`)}
+                      className="lesson-button group"
                     >
-                      <span className="text-gray-800 text-sm font-semibold">
-                        {lesson}
-                      </span>
-                      <span className="text-orange-500 group-hover:translate-x-1 transition-transform">→</span>
+                      <div className="lesson-icon">📚</div>
+                      <div className="flex-1 text-left min-w-0">
+                        <span className="text-sm font-semibold" style={{color: 'rgba(232, 212, 200, 0.9)'}}>
+                          {lesson}
+                        </span>
+                      </div>
+                      <span className="status-badge">Бесплатно</span>
+                      <span className="button-arrow" style={{color: 'rgba(212, 165, 116, 0.9)'}}>→</span>
                     </button>
                   ))}
                 </div>

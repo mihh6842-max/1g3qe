@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { SkierIcon, BookIcon, GraduationIcon, ClipboardIcon, ShoppingIcon, MountainIcon, EquipmentIcon } from '../components/Icons'
+import { SkiIcon, BookIcon, GraduationIcon, ClipboardIcon, ShoppingIcon, MountainIcon, EquipmentIcon } from '../components/Icons'
 
 interface MenuCard {
   title: string
@@ -10,7 +10,7 @@ interface MenuCard {
 }
 
 const menuItems: MenuCard[] = [
-  { title: 'Обучение', icon: SkierIcon, path: '/training' },
+  { title: 'Обучение', icon: SkiIcon, path: '/training' },
   { title: 'Лекции', icon: BookIcon, path: '/lectures' },
   { title: 'Курсы', icon: GraduationIcon, path: '/courses', locked: true, premium: true },
   { title: 'Тренировочный план', icon: ClipboardIcon, path: '/plan' },
@@ -54,32 +54,34 @@ export default function Home() {
         </div>
 
         {/* Сетка карточек с glassmorphism */}
-        <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
           {menuItems.map((item, index) => (
             <button
               key={index}
               onClick={() => navigate(item.path)}
-              className="backdrop-blur-2xl bg-white/15 rounded-3xl p-6 border border-white/20 shadow-2xl hover:shadow-orange-500/20 hover:bg-white/25 hover:border-white/30 transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center gap-3 relative overflow-hidden group"
+              className="section-button group"
             >
               {/* Градиентный эффект при наведении */}
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 via-pink-400/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-400/10 via-pink-400/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[32px]" />
 
               {/* Иконка премиум */}
               {item.premium && (
-                <div className="absolute top-3 right-3 flex gap-1 backdrop-blur-lg bg-orange-500/30 px-2 py-1 rounded-full border border-orange-300/30">
-                  <span className="text-xs">🔒</span>
-                  <span className="text-xs">💲</span>
+                <div className="absolute top-3 right-3 backdrop-blur-xl bg-gradient-to-br from-orange-400/40 to-yellow-400/40 px-2.5 py-1.5 rounded-full border-2 border-yellow-300/60 shadow-lg">
+                  <div className="flex gap-1 items-center">
+                    <span className="text-sm">🔒</span>
+                    <span className="text-sm">💎</span>
+                  </div>
                 </div>
               )}
 
               {/* Иконка */}
-              <div className="mb-1 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 drop-shadow-2xl">
-                <item.icon className="w-16 h-16" />
+              <div className="icon-container mb-2 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 drop-shadow-2xl relative z-10">
+                <item.icon className="w-12 h-12" />
               </div>
 
               {/* Текст */}
-              <div className="text-center relative z-10">
-                <h3 className="text-sm font-bold text-white leading-tight drop-shadow-lg">
+              <div className="relative z-10">
+                <h3 className="section-button-text drop-shadow-lg">
                   {item.title}
                 </h3>
               </div>
