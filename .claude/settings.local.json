@@ -23,7 +23,9 @@
       "Bash(git push:*)",
       "Bash(git branch:*)",
       "Bash(npm run build:*)",
-      "Bash(npm run deploy:*)"
+      "Bash(npm run deploy:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:mihh6842-max.github.io)"
     ]
   }
 }
