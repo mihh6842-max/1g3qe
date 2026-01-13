@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(start cmd /k \"npm run dev\")",
+      "Bash(powershell \"Get-Process | Sort-Object WorkingSet -Descending | Select-Object -First 20 Name, @{Name=''Memory\\(MB\\)'';Expression={[math]::Round\\($_WorkingSet / 1MB, 2\\)}} | Format-Table -AutoSize\")",
+      "Bash(powershell:*)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(wmic OS get:*)",
+      "Bash(cmd /c \"systeminfo | findstr /C:\"\"Total Physical Memory\"\" /C:\"\"Available Physical Memory\"\"\")",
+      "Bash(npm run dev:*)",
+      "Bash(timeout:*)",
+      "Bash(start http://localhost:5173)",
+      "WebSearch",
+      "WebFetch(domain:dribbble.com)",
+      "Bash(start http://localhost:5174)",
+      "Bash(taskkill:*)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git branch:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run deploy:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:mihh6842-max.github.io)"
+    ]
+  }
+}
